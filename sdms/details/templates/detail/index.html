@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Caveat|Monda&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Caveat|Monda&display=swap" rel="stylesheet">
+<style>
+    body {
+        background: url("{% static 'image/bg.jpg' %}") no-repeat center center fixed;
+        background-size: cover;
+        -webkit-background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 100%;
+    }
+
+    #dorm-name {
+        font-family: 'Bai Jamjuree', sans-serif;
+        border-radius: 10px;
+        margin: 0px auto;
+        width: 100%;
+        height: 100%;
+    }
+
+    h1 {
+        text-align: center;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 50px;
+        text-shadow: 2px 2px 4px #000000;
+    }
+
+    .welcome {
+        text-align: center;
+        position: absolute;
+        left: 0;
+        top: 60%;
+        width: 100%;
+        text-align: center;
+        color: white;
+        font-size: 30px;
+        text-shadow: 2px 2px 4px #000000;
+    }
+
+    hr.line_pd_list {
+        border: 2px solid rgb(125, 170, 155);
+    }
+
+    hr.line_carts {
+        border: 2px solid rgb(212, 130, 36);
+    }
+    
+    /* ปุ่มไปหน้า detail*/
+    #index-button {
+        position: absolute;
+        left: 46.2%;
+        top: 68%;
+    }
+</style>
+
+<body>
+    {% comment %} ส่วนบนสุด {% endcomment %}
+    <div class="container" id='dorm-name'>
+        <h1>หอแสงแมนชั่น อนุเสาวรีย์</h1>
+        <p class="welcome">ยินดีต้อนรับ</p>
+        <br>
+        <form class="form-inline my-2 my-lg-0" id='index-button'>
+                <button type="button" class="btn btn-success"><a href="{% url 'detail' %}" style="color: white;">ดูรายละเอียด</a></button>
+        </form>
+        
+    </div>
+
+</body>
+{% endblock %}
+
+{% comment %} อัพโหลดรูป <div class="form-group" style="color: white;">
+                <label for="image">Image :</label>
+                <input type="file" id="image" name="image">
+            </div> {% endcomment %}
